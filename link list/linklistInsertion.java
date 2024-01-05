@@ -21,10 +21,11 @@ public class linklistInsertion
         System.out.print("Enter data = ");
         data = sc.nextInt();
         Node new_node = new Node(data);
-        if(head==null){
+        if(head == null){
             head=new_node;
         }
-        else{
+        else
+        {
             System.out.print("enter 1 to insert at beginning, enter 2 to insert in middle , enter 3 to insert at end");
             m= sc.nextInt();
             switch (m) {
