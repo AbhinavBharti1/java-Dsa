@@ -13,10 +13,10 @@ public class linklistInsertion
     }
     Node head = null;
 
-    public void creation()
+    public void creation(Scanner sc)
     {
         int data,n,m,p;
-        Scanner sc = new Scanner(System.in);
+
         do{
         System.out.print("Enter data = ");
         data = sc.nextInt();
@@ -75,8 +75,9 @@ public class linklistInsertion
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         linklistCreation li = new  linklistCreation();
-        li.creation();
+        li.creation(sc);
         li.traverse();
     }
 }

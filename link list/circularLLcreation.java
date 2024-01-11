@@ -14,10 +14,9 @@ public class circularLLcreation
     Node head = null;
     Node tail = null;
 
-    public void creation()
+    public void creation(Scanner sc)
     {
         int data,n;
-        Scanner sc = new Scanner(System.in);
         do{
         System.out.print("Enter data = ");
         data = sc.nextInt();
@@ -57,8 +56,9 @@ public class circularLLcreation
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         circularLLcreation  li = new  circularLLcreation();
-        li.creation();
+        li.creation(sc);
         li.traverse();
     }
 }

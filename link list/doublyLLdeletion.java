@@ -16,10 +16,9 @@ public class doublyLLdeletion
     Node head = null;
     Node tail = null;
 
-    public void creation()
+    public void creation(Scanner sc)
     {
         int data,n;
-        Scanner sc = new Scanner(System.in);
         do{
         System.out.print("Enter data = ");
         data = sc.nextInt();
@@ -54,15 +53,15 @@ public class doublyLLdeletion
             System.out.println();
         }
     }
-    public void delete()
+    public void delete(Scanner sc)
     {
         int l,z,y;
         System.out.println("if yo want to delete an element press 1 ");
-        Scanner cs = new Scanner(System.in);
-        l=cs.nextInt();
+       
+        l=sc.nextInt();
         if(l==1)
             System.out.println("enter 1 to delete at beginning, enter 2 to delete in middle , enter 3 to delete at end");
-        z = cs.nextInt();
+        z = sc.nextInt();
         switch (z) {
             case 1:
                 Node temp = head;
@@ -72,7 +71,7 @@ public class doublyLLdeletion
                 break;
             case 2:
                 System.out.println("enter position of node to be deleted");
-                y = cs.nextInt();
+                y = sc.nextInt();
                 y=y-1;
                 Node temp4=head;
                 Node temp5 = temp4.next;
@@ -98,10 +97,11 @@ public class doublyLLdeletion
 
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         doublyLLdeletion li = new  doublyLLdeletion();
-        li.creation();
+        li.creation(sc);
         li.traverse();
-        li.delete();
+        li.delete(sc);
         li.traverse();
     }
 }

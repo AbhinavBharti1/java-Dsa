@@ -16,10 +16,10 @@ public class doublyLLinsertion
     Node head = null;
     Node tail = null;
 
-    public void creation()
+    public void creation(Scanner sc)
     {
         int data,n,m,p;
-        Scanner sc = new Scanner(System.in);
+       
         do{
         System.out.print("Enter data = ");
         data = sc.nextInt();
@@ -81,8 +81,9 @@ public class doublyLLinsertion
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         doublyLLinsertion li = new  doublyLLinsertion();
-        li.creation();
+        li.creation(sc);
         li.traverse();
     }
 }
